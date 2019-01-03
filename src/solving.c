@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iet-tibi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/29 01:42:56 by iet-tibi          #+#    #+#             */
-/*   Updated: 2018/12/29 02:16:45 by iet-tibi         ###   ########.fr       */
+/*   Created: 2019/01/03 15:39:23 by iet-tibi          #+#    #+#             */
+/*   Updated: 2019/01/03 15:39:25 by iet-tibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	remove_tetri(char **board, char wanted)
 	}
 }
 
-int		put_one_tetri(int r, int d, tetri *t, char **board)
+int		put_one_tetri(int r, int d, t_tetri *t, char **board)
 {
 	int i;
 	int dimention;
@@ -50,7 +50,7 @@ int		put_one_tetri(int r, int d, tetri *t, char **board)
 		return (1);
 }
 
-int		it_fits_it_sits(int r, int d, tetri *t, char **board)
+int		it_fits_it_sits(int r, int d, t_tetri *t, char **board)
 {
 	int	i;
 	int	dimention;
@@ -66,7 +66,7 @@ int		it_fits_it_sits(int r, int d, tetri *t, char **board)
 		return (1);
 }
 
-int		put_to_board(tetri **t, char **board, int dimention, int x)
+int		put_to_board(t_tetri **t, char **board, int dimention, int x)
 {
 	int tab[2];
 

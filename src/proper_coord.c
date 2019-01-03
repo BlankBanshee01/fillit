@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iet-tibi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/29 02:06:53 by iet-tibi          #+#    #+#             */
-/*   Updated: 2018/12/29 02:15:56 by iet-tibi         ###   ########.fr       */
+/*   Created: 2019/01/03 15:39:14 by iet-tibi          #+#    #+#             */
+/*   Updated: 2019/01/03 15:39:15 by iet-tibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static int	proper_cord_up(tetri **t, int k)
+static int	proper_cord_up(t_tetri **t, int k)
 {
 	int	i;
 	int	j;
@@ -37,7 +37,7 @@ static int	proper_cord_up(tetri **t, int k)
 	return (r);
 }
 
-static int	proper_cord_left(tetri **t, int k)
+static int	proper_cord_left(t_tetri **t, int k)
 {
 	int	i;
 	int	j;
@@ -65,7 +65,7 @@ static int	proper_cord_left(tetri **t, int k)
 	return (r);
 }
 
-void		proper_cord_manager(tetri **t)
+void		proper_cord_manager(t_tetri **t)
 {
 	int		up;
 	int		left;

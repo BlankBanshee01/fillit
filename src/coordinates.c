@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iet-tibi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/12 14:58:27 by iet-tibi          #+#    #+#             */
-/*   Updated: 2018/12/29 02:15:39 by iet-tibi         ###   ########.fr       */
+/*   Created: 2019/01/03 15:38:40 by iet-tibi          #+#    #+#             */
+/*   Updated: 2019/01/03 15:38:42 by iet-tibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static void	get_cord(tetri **t, int b)
+static void	get_cord(t_tetri **t, int b)
 {
 	int		i;
 	int		j;
@@ -40,7 +40,7 @@ static void	get_cord(tetri **t, int b)
 	}
 }
 
-static void	rita_skita(tetri **t, char *buff)
+static void	rita_skita(t_tetri **t, char *buff)
 {
 	static char	a;
 	static int	i;
@@ -50,7 +50,7 @@ static void	rita_skita(tetri **t, char *buff)
 		a = 'A';
 		i = 0;
 	}
-	t[i] = malloc(sizeof(tetri));
+	t[i] = malloc(sizeof(t_tetri));
 	t[i]->data = ft_strsplit(buff, '\n');
 	t[i]->id = a++;
 	get_cord(t, i);
@@ -58,7 +58,7 @@ static void	rita_skita(tetri **t, char *buff)
 	t[i] = NULL;
 }
 
-void		read_and_split(int fd, tetri **t)
+void		read_and_split(int fd, t_tetri **t)
 {
 	char	*line;
 	char	*buff;
